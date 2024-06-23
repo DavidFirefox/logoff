@@ -1,7 +1,7 @@
 <?php
-eval(getPluginConf("logoff"));
+eval(FileUtil::getPluginConf("logoff")); // update to work with ruTorrent > 4.x
 
-$me = getUser();
+$me = User::getUser(); // update to work with ruTorrent > 4.x
 $users = array();
 
 $dirs = scandir($rootPath . "/share/users/");
